@@ -33,14 +33,20 @@ People (Vietnamese) with disabilities lack full access to employment opportuniti
     * Training programs available (if applicable)
     * Job / program openings
 
+
+
 **Jobs / Programs Board**
 * List of available jobs / programs
 * Contact / application information or automation
 * Ability for businesses/orgs to post a job
 * Search list / filter list of jobs
 
+
+
 **Job Seekers Board**
 * Search list / filter list of resumes
+
+
 
 **Extras**
 * Speech control
