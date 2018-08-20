@@ -17,3 +17,40 @@ People (Vietnamese) with disabilities lack full access to employment opportuniti
 
 
 **The due date for this hackathon project is Oct 14, 2018.**
+
+## Potential Features
+
+**User Profiles**
+1. Profile for persons with a disability
+    * Resume upload
+    * Bio, skills and (work?) interests list
+    * Personal Story
+
+2. Profile for business employing people with disability / organisation that runs training programs for businesses / persons with disabilities
+    * About the business/ org
+    * Types of disabilities they have the capability/capacity to support
+    * Accessibility level - wheel-chair access?
+    * Training programs available (if applicable)
+    * Job / program openings
+
+**Jobs / Programs Board**
+* List of available jobs / programs
+* Contact / application information or automation
+* Ability for businesses/orgs to post a job
+* Search list / filter list of jobs
+
+**Job Seekers Board**
+* Search list / filter list of resumes
+
+**Extras**
+* Speech control
+* Screen reader
+* Translate all content into different languages
+* Resume building tool
+* Blog / Vlog - success stories from people with disabilities and resources for both job seekers and employers
+* Reviews for workplaces
+* Events board:
+    * List of events including name, short description, date, time, location, cost and link to external event page
+    * Ability for all profile types to post events
+* Volunteer Profile - people can express interest in supporting training programs - share bio, specific skill-set and types of work/disabilities interested in volunteering with
+* Job Alerts
