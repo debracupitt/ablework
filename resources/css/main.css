@@ -1,0 +1,48 @@
+body {
+  max-width: 400px; /* 320px = iPhone 4 */
+  margin: auto;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #424343;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-top {
+  background-image: url("../images/chris-slupski-663299-unsplash.jpg");
+  height: 300px;
+  background-size: cover;
+}
+
+.callout {
+  text-align: center;
+  color: white;
+  width: 75%;
+  position: relative;
+  background-color: #730062;
+  border-radius: 20px;
+  margin: auto;
+  bottom: 50px;
+}
+
+.wrap {
+  padding: 20px 0;
+}
+
+.logo {
+  position: relative;
+  top: 50px;
+  display: block;
+  margin: auto;
+  width: 135px;
+  height: auto;
+}
