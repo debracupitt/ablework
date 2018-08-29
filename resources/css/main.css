@@ -1,25 +1,83 @@
-body {
+html {
+  position: relative;
+  min-height: 100%;
   max-width: 400px; /* 320px = iPhone 4 */
   margin: auto;
   font-family: 'Work Sans', sans-serif;
+  background-color: #fff;
+}
+
+body {
+  height: 100%;
+  /* max-width: 400px; */
   background-color: #424343;
+  padding: 0 0 60px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    z-index: 20;
+    width: 100%;
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   line-height: normal;
 }
 
+h2 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+}
+
 h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   line-height: normal;
 }
 
+h4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.nav {
+  padding: 10px 0;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.fa,
+.fas,
+.far {
+  font-size: 18px;
+  padding-bottom: 8px;
+  z-index: 50;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-top {
-  background-image: url("../images/chris-slupski-663299-unsplash.jpg");
-  height: 300px;
+  background-image: url("../images/home-background.jpg");
+  height: 280px;
   background-size: cover;
 }
 
@@ -45,4 +103,40 @@ h3 {
   margin: auto;
   width: 135px;
   height: auto;
+}
+
+.card-tall {
+  margin: 10px;
+  background-color: #212121;
+  color: #fff;
+}
+
+.img-frame {
+  width: 130px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.img-frame img {
+  height: 100%;
+}
+
+.text-wrap {
+  padding: 10px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-cards {
+  position: relative;
+  bottom: 30px;
+}
+
+.see-all {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 15px;
 }
