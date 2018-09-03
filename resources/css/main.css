@@ -359,7 +359,7 @@ input[type=checkbox]:checked:disabled + label:before {
   margin: 7px 0 0 0;
 }
 
-.card-tall {
+.card {
   margin: 10px;
   background-color: #212121;
   color: #fff;
