@@ -61,6 +61,7 @@ h5 {
   line-height: normal;
   opacity: 1;
 }
+
 .nav {
   padding: 10px 0;
   justify-content: space-around;
@@ -175,7 +176,8 @@ main {
   font-size: 13px;
   opacity: 0.8;
 }
-main i{
+
+main i {
   margin: 5px;
 }
 
@@ -200,10 +202,12 @@ main i{
   margin: auto;
   bottom: 95px;
 }
+
 .view-opp p {
   opacity: 0.6;
   font-size: 13px;
 }
+
 .flow {
   flex-direction: column;
   text-align: center;

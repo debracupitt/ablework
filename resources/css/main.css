@@ -14,10 +14,23 @@ body {
   padding: 0 0 60px;
 }
 
+main {
+  color: white;
+  margin: 0px 30px;
+  font-size: 13px;
+  opacity: 0.8;
+  position: relative;
+  top: -40px;
+}
+
+main i {
+  margin: 5px;
+}
+
 footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
     height: 60px;
     background-color: #000;
     color: #fff;
@@ -25,14 +38,21 @@ footer {
     width: 100%;
 }
 
-p, span {
+span {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
 }
 
+.nav span {
+  font-size: 11px;
+}
+
 p {
-  margin: 15px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  /* margin: 15px, 0; */
 }
 
 h2 {
@@ -62,6 +82,28 @@ h5 {
   opacity: 1;
 }
 
+hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    color: white;
+    border-width: 1px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 18px;
+}
+
+li {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+
 .nav {
   padding: 10px 0;
   justify-content: space-around;
@@ -76,6 +118,11 @@ h5 {
   z-index: 50;
 }
 
+.small {
+  font-size: 10px;
+  padding-top: 3px;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -87,16 +134,75 @@ h5 {
   flex-direction: column;
 }
 
+.wrap-all {
+  padding: 20px;
+}
+
+.wrap-sides {
+  padding: 0 20px;
+}
+
+.rc-icon {
+  color: white;
+  position: absolute;
+  font-size: 25px;
+  top: 30px;
+  right: 30px;
+}
+
 .home-top {
   background-image: url("../images/home-background.jpg");
-  height: 280px;
+  height: 300px;
   background-size: cover;
 }
 
 .profile-top {
-  background-image: url("../images/background-profile-2.jpg");
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url(../images/background-profile-2.jpg);
   height: 280px;
   background-size: cover;
+}
+
+.profile-pic {
+  background-size: cover;
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 34%;
+  margin: auto;
+  z-index: 1;
+}
+
+.vn {
+  background-image: url('../images/profile-pic-1.jpg');
+}
+
+.db {
+  background-image: url('../images/DonkeyBakery-logo-cutoff.jpg');
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 34%;
+  margin: auto;
+  width: 135px;
+  height: auto;
+}
+
+.profile-name {
+  text-align: center;
+  color: white;
+  width: 75%;
+  position: relative;
+  margin: auto;
+  bottom: 90px;
 }
 
 .callout {
@@ -110,17 +216,32 @@ h5 {
   bottom: 50px;
 }
 
-.wrap {
-  padding: 20px 0;
+.view-opp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  margin: auto;
+  top: -60px;
+  text-align: center;
 }
 
-.logo {
-  position: relative;
-  top: 50px;
-  display: block;
-  margin: auto;
-  width: 135px;
-  height: auto;
+.view-opp-icon {
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+}
+
+.view-opp p {
+  opacity: 0.6;
+  font-size: 13px;
+  margin: 7px 0 0 0;
 }
 
 .card-tall {
