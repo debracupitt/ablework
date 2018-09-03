@@ -25,10 +25,14 @@ footer {
     width: 100%;
 }
 
-p {
-  font-size: 12px;
-  font-weight: 300;
+p, span {
+  font-size: 14px;
+  font-weight: 400;
   line-height: normal;
+}
+
+p {
+  margin: 15px;
 }
 
 h2 {
@@ -48,6 +52,14 @@ h4 {
   font-weight: 400;
   line-height: normal;
   opacity: 0.5;
+}
+
+h5 {
+  margin-top:5px;
+  font-size: 16px;
+  font-weight:600;
+  line-height: normal;
+  opacity: 1;
 }
 
 .nav {
@@ -77,6 +89,12 @@ h4 {
 
 .home-top {
   background-image: url("../images/home-background.jpg");
+  height: 280px;
+  background-size: cover;
+}
+
+.profile-top {
+  background-image: url("../images/background-profile-2.jpg");
   height: 280px;
   background-size: cover;
 }
