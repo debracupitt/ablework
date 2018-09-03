@@ -104,6 +104,53 @@ li {
   line-height: normal;
 }
 
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #730062;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+/* input[type=checkbox] + label:active:before {
+  transform: scale(0);
+} */
+
+input[type=checkbox]:checked + label:before {
+  background-color: #730062;
+  border-color: #730062;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
 .nav {
   padding: 10px 0;
   justify-content: space-around;
@@ -114,8 +161,14 @@ li {
 .fas,
 .far {
   font-size: 18px;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
   z-index: 50;
+}
+
+.nav .fa,
+.nav .fas,
+.nav .far {
+  padding-bottom: 8px;
 }
 
 .small {
@@ -128,6 +181,10 @@ li {
   flex-direction: row;
   overflow: scroll;
 }
+
+/* .center {
+  justify-content: space-around;
+} */
 
 .column {
   display: flex;
@@ -165,6 +222,47 @@ li {
     url(../images/background-profile-2.jpg);
   height: 280px;
   background-size: cover;
+}
+
+.search-top {
+  background-color: white;
+  color: #730062;
+  text-align: center;
+  height: 170px;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.search-top h2 {
+  margin: auto;
+}
+
+.on {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  color: white;
+  background-color: #730062;
+  padding: 10px;
+  border: solid 1px #730062;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.off {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  color: #730062;
+  background-color: white;
+  padding: 10px;
+  border: solid 1px #730062;
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .profile-pic {
@@ -214,6 +312,23 @@ li {
   border-radius: 20px;
   margin: auto;
   bottom: 50px;
+}
+
+.buttons {
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.filter {
+  background-color: white;
+  padding: 10px;
+  border: solid 1px #730062;
+  margin: auto;
+  width: 75%;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .view-opp {
