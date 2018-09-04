@@ -9,7 +9,6 @@ html {
 
 body {
   height: 100%;
-  /* max-width: 400px; */
   background-color: #424343;
   padding: 0 0 60px;
 }
@@ -294,4 +293,57 @@ li {
   text-align: center;
   position: relative;
   bottom: 15px;
+}
+
+/* ---- Login Account Setup Page ---- */
+
+.login {
+  background-color: #730062;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.space-around {
+  height: 100%;
+  justify-content: space-around;
+}
+
+.logo2 {
+  margin: auto;
+  width: 120px;
+  height: auto;
+}
+
+.login-buttons {
+  width: 70%;
+  margin: auto;
+}
+
+.login-btn {
+  margin: 15px 0 0 0;
+  height: 45px;
+}
+
+.pink {
+  background-color: #EF0B4F;
+  border-color: #EF0B4F;
+}
+
+.login-bottom {
+  text-align: center;
+  color: white;
+  margin: auto;
+  width: 100%;
+}
+
+.login-bottom p {
+  font-size: 14;
+  font-weight: 300;
+}
+
+.login-bottom a {
+  font-size: 14;
+  font-weight: 400;
+  color: white;
 }
