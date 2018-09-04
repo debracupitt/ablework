@@ -302,6 +302,8 @@ li {
   margin: 0;
   padding: 0;
   height: 100vh;
+  border: solid #730062 1px;
+  box-sizing: border-box;
 }
 
 .space-around {
@@ -346,4 +348,32 @@ li {
   font-size: 14;
   font-weight: 400;
   color: white;
+}
+
+/* --- create-account --- */
+
+.create-account {
+  box-sizing: border-box;
+  margin: 10% auto;
+  padding: 15px;
+  border: white solid 1px;
+  width: 80%;
+  background-color: white;
+  color: #730062;
+}
+
+.create-account h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.create-account p {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.create-account a {
+  color: #730062;
+  text-align: center;
+  font-weight: 500;
 }

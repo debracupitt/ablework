@@ -42,8 +42,6 @@ input[type=checkbox]:checked:disabled + label:before {
   border-color: #bfb;
 }
 
-
-
 /* ------  Buttons Styling ------- */
 
 button {
@@ -74,4 +72,13 @@ button {
 
 #run-search {
   width: 50%;
+}
+
+
+/* --- Account Form --- */
+
+.account-form {
+  /* margin: 10px; */
+  box-sizing: border-box;
+
 }
