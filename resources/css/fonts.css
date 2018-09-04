@@ -37,3 +37,8 @@ span {
   font-weight: 300;
   line-height: normal;
 }
+
+.small {
+  font-size: 10px;
+  padding-top: 3px;
+}
