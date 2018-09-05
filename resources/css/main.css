@@ -7,6 +7,10 @@ html {
   background-color: #fff;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   height: 100%;
   background-color: #424343;
@@ -354,7 +358,9 @@ li {
 
 .create-account {
   box-sizing: border-box;
-  margin: 10% auto;
+  position: relative;
+  top: 5%;
+  margin: auto;
   padding: 15px;
   border: white solid 1px;
   width: 80%;
@@ -368,7 +374,7 @@ li {
 }
 
 .create-account p {
-  text-align: center;
+  text-align: left;
   padding: 10px 0;
 }
 
