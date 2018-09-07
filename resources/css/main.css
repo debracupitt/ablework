@@ -5,6 +5,11 @@ html {
   margin: auto;
   font-family: 'Work Sans', sans-serif;
   background-color: #fff;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 *:focus {
@@ -12,18 +17,24 @@ html {
 }
 
 body {
-  height: 100%;
-  background-color: #424343;
-  padding: 0 0 60px;
+  /* height: 100%; */
+  /* padding: 0 0 60px; */
+  border: solid 0.2px white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* box-sizing: border-box; */
 }
 
 main {
-  color: white;
+  color: #351645;
   margin: 0px 30px;
   font-size: 13px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   position: relative;
   top: -40px;
+  background-color: white;
+  padding-bottom: 80px;
 }
 
 main i {
@@ -31,14 +42,14 @@ main i {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0px;
-    height: 60px;
-    background-color: #000;
-    color: #fff;
-    z-index: 20;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  height: 60px;
+  background-color: #351645;
+  color: #fff;
+  z-index: 20;
+  width: 100%;
 }
 
 .nav span {
@@ -52,9 +63,14 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    color: white;
-    border-width: 1px;
+    color: #8E69A0;
+    border-width: 0.5px;
+    opacity: 0.5;
 }
+
+/* .hr-purple {
+  color: #351645;
+} */
 
 ul {
   list-style-type: disc;
@@ -65,6 +81,11 @@ li {
   font-size: 13px;
   font-weight: 300;
   line-height: normal;
+}
+
+.top-bar {
+  height: 22px;
+  background: #351645;
 }
 
 .nav {
@@ -84,6 +105,10 @@ li {
 .nav .fas,
 .nav .far {
   padding-bottom: 8px;
+}
+
+.nav-selected {
+  color: #FFA3C0;
 }
 
 .row {
@@ -113,7 +138,7 @@ li {
   color: white;
   position: absolute;
   font-size: 25px;
-  top: 30px;
+  top: 40px;
   right: 30px;
 }
 
@@ -124,27 +149,49 @@ li {
 }
 
 .profile-top {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url(../images/background-profile-2.jpg);
-  height: 280px;
+  background-color: #603E71;
+  height: 240px;
   background-size: cover;
 }
 
 .search-top {
-  background-color: white;
-  color: #730062;
+  background-color: #603E71;
+  color: white;
   text-align: center;
-  height: 170px;
+  height: 150px;
   justify-content: space-around;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
 .search-top h2 {
   margin: auto;
+}
+
+.tabs {
+  background-color: #8E69A0;
+  color: white;
+  height: 45px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab {
+  width: 100%;
+  height: 100%;
+}
+
+.tab h3{
+  text-align: center;
+  position: relative;
+  top: 12px;
+}
+
+.selected {
+  border-bottom: solid 6px #EB7290;
+}
+
+.not-selected h3 {
+  font-weight: 300;
 }
 
 .profile-pic {
@@ -182,7 +229,7 @@ li {
   width: 75%;
   position: relative;
   margin: auto;
-  bottom: 90px;
+  bottom: 65px;
 }
 
 .callout {
@@ -190,7 +237,7 @@ li {
   color: white;
   width: 75%;
   position: relative;
-  background-color: #730062;
+  background-color: #8E69A0;
   border-radius: 20px;
   margin: auto;
   bottom: 50px;
@@ -206,7 +253,7 @@ li {
 .filter {
   background-color: white;
   padding: 10px;
-  border: solid 1px #730062;
+  border: solid 1px white;
   margin: auto;
   width: 75%;
   border-radius: 5px;
@@ -214,6 +261,7 @@ li {
   align-items: center;
   cursor: pointer;
   user-select: none;
+  color: #351645;
 }
 
 .search-form {
@@ -229,6 +277,7 @@ li {
   padding: 8px;
   box-sizing: border-box;
   user-select: none;
+  color: #351645;
 }
 
 .show {
@@ -248,25 +297,28 @@ li {
 
 .view-opp-icon {
   font-size: 20px;
-  width: 25px;
-  height: 25px;
-  padding: 10px;
+  width: 45px;
+  height: 45px;
+  padding: 12px 9px 8px 11px;
   text-align: center;
   border-radius: 50%;
-  background-color: white;
-  color: black;
+  background-color: #EB7290;
+  color: white;
 }
 
 .view-opp p {
-  opacity: 0.6;
   font-size: 13px;
   margin: 7px 0 0 0;
+  color: #EB7290;
 }
 
 .card {
   margin: 10px;
-  background-color: #212121;
-  color: #fff;
+  background-color: white;
+  color: #351645;
+  border: solid 1px #EB7290;
+  border-radius: 10px;
+  box-shadow: 0px 4px 7px #88888878;
 }
 
 .img-frame {
@@ -302,22 +354,17 @@ li {
 /* ---- Login Account Setup Page ---- */
 
 .login {
-  background-color: #730062;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  border: solid #730062 1px;
-  box-sizing: border-box;
+  background-image: linear-gradient(#351645, #EB7290);
 }
 
 .space-around {
-  height: 100%;
   justify-content: space-around;
+  height: 90vh;
 }
 
 .logo2 {
   margin: auto;
-  width: 120px;
+  width: 60%;
   height: auto;
 }
 
@@ -326,14 +373,10 @@ li {
   margin: auto;
 }
 
-.login-btn {
-  margin: 15px 0 0 0;
-  height: 45px;
-}
-
 .pink {
-  background-color: #EF0B4F;
-  border-color: #EF0B4F;
+  background-color: #B54263;
+  border-color: #B54263;
+  color: white;
 }
 
 .login-bottom {
@@ -365,7 +408,7 @@ li {
   border: white solid 1px;
   width: 80%;
   background-color: white;
-  color: #730062;
+  color: #351645;
 }
 
 .create-account h2 {
@@ -379,7 +422,11 @@ li {
 }
 
 .create-account a {
-  color: #730062;
+  color: #603E71;
   text-align: center;
   font-weight: 500;
+}
+
+.tc p {
+  text-align: center;
 }

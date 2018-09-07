@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Job Seeker Profile</title>
+    <title>Search</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/reset.css">
@@ -14,12 +14,9 @@
   </head>
 
   <body>
+    <div class="top-bar"></div>
     <div class="search-top column">
       <h2>Jobs, Apprenticeships</br>and Training Programs</h2>
-      <div class="row center buttons">
-        <button class="on">Opportunities</button>
-        <button class="off">Job Seekers</button>
-      </div>
       <div class="filter row center">
         <h3>Filter</h3>
         <i class="fas fa-angle-down"></i>
@@ -48,6 +45,15 @@
         </br>
         <button id="run-search">Filter</button>
       </form>
+    </div>
+
+    <div class="row center tabs">
+      <div class="tab selected">
+        <h3>Opportunities</h3>
+      </div>
+      <div class="tab not-selected">
+        <h3>Job Seekers</h3>
+      </div>
     </div>
 
     <div class="column">
@@ -122,13 +128,9 @@
   <footer>
     <nav role="navigation">
       <div class="row nav">
-        <div class="column">
-          <i class="fa fa-home"></i>
-          <span>Home</span>
-        </div>
-        <div class="column">
-          <i class="fa fa-clipboard-check"></i>
-          <span>Search</span>
+        <div class="column nav-selected">
+          <i class="fas fa-search"></i>
+          <span>Explore</span>
         </div>
         <div class="column">
           <i class="fas fa-calendar-alt"></i>

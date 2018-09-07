@@ -11,14 +11,14 @@ input[type=checkbox] {
 
 input[type=checkbox] + label:before {
   content: "\2714";
-  border: 0.1em solid #730062;
+  border: 2px solid #351645;
   border-radius: 0.2em;
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding-left: 0.2em;
-  padding-bottom: 0.1em;
-  padding-top: 0.1em;
+  width: 20px;
+  height: 20px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   margin-right: 0.4em;
   vertical-align: bottom;
   color: transparent;
@@ -27,8 +27,8 @@ input[type=checkbox] + label:before {
 
 input[type=checkbox]:checked + label:before {
   background-color: #fff;
-  border-color: #730062;
-  color: #730062;
+  border-color: #351645;
+  color: #351645;
 }
 
 input[type=checkbox]:disabled + label:before {
@@ -51,31 +51,41 @@ input[type=checkbox]:checked:disabled + label:before {
 button {
   width: 100%;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   line-height: normal;
-  color: white;
-  background-color: #730062;
+  /* color: white; */
   padding: 10px;
-  border: solid 1px #730062;
-  margin-right: 5px;
+  border: solid 1px white;
   border-radius: 5px;
   cursor: pointer;
+  background-color: white;
 }
 
-.on {
+/* .on {
   margin-right: 5px;
 }
 
 .off {
-  color: #730062;
-  background-color: white;
+  color: #351645;
   margin-left: 5px;
   margin-right: 0px;
-}
+} */
 
 #run-search {
   width: 50%;
+  background-color: #B54263;
+  color: white;
+}
+
+.login-btn {
+  margin: 15px 0 0 0;
+  height: 45px;
+}
+
+.secondary {
+  background: rgba(76, 175, 80, 0);
+  color: white;
 }
 
 
@@ -100,7 +110,7 @@ button {
 .text-input-style {
   padding: 10px;
   width: 90%;
-  border: solid #730062 1px;
+  border: solid #351645 1px;
   border-radius: 10px;
   margin: 3px 0 13px 0;
   font-size: 13px;
@@ -131,7 +141,7 @@ button {
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #730062;
+    color: #603E71;
     font-size: 14px;
     font-weight: 400;
 }
@@ -144,7 +154,7 @@ button {
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #730062;
+    border: 1px solid #351645;
     border-radius: 100%;
     background: #fff;
 }
@@ -154,10 +164,10 @@ button {
     content: '';
     width: 12px;
     height: 12px;
-    background: #730062;
+    background: #603E71;
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 3px;
+    left: 3px;
     border-radius: 100%;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
