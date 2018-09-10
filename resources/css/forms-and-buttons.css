@@ -104,7 +104,7 @@ button {
   font-size: 10px;
   font-weight: 300;
   line-height: normal;
-  padding: 8px;
+  padding: 10px 0 0 8px;
 }
 
 .text-input-style {
@@ -112,7 +112,7 @@ button {
   width: 90%;
   border: solid #351645 1px;
   border-radius: 10px;
-  margin: 3px 0 13px 0;
+  margin: 2px 0 3px 0;
   font-size: 13px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
@@ -124,6 +124,17 @@ button {
   position: relative;
   left: -24px;
 }
+
+.create-account .form-error {
+  font-size: 11px;
+  color: red;
+  padding: 0 0 0 8px;
+}
+
+/* input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+} */
 
 /* --- Radio button styling --- */
 

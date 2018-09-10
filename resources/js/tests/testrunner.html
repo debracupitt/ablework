@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jasmine Test Runner</title>
+    <link rel="stylesheet" href="jasmine/jasmine.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="jasmine/jasmine.js"></script>
+    <script src="jasmine/jasmine-html.js"></script>
+
+    <script src="../ablework.js"></script>
+
+    <script src="core/accountForm.js"></script>
+  </head>
+    <body>
+      <script>
+          //run specs and add reporter
+          jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+          jasmine.getEnv().execute();
+      </script>
+      <div class="testing"></div>
+    </body>
+</html>

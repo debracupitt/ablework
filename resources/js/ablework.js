@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
 var users = {
   jobSeekers: [],
@@ -65,19 +65,108 @@ var events = {
   setUpEventListeners: function(url) {
     if (url.includes("create-account")) {
       var createBtn = document.getElementById('account-create');
-      createBtn.addEventListener('click', handlers.createUser);
+      var formInputs = document.querySelectorAll('.text-input-style');
+      formInputs.forEach(input => input.addEventListener('blur', validators.validate));
     }
 
     if (url.includes("search")) {
       const filterButton = document.querySelector('.filter');
-
       filterButton.addEventListener('click', handlers.toggleOpen)
     }
   }
 }
 
+var validators = {
+  validate: function () {
+    var error;
+    if (this.value === '') {
+      error = "This field is mandatory";
+    }
+    else if (this.value.length > this.maxLength || this.value.length < this.minLength) {
+      error = `Number of characters must be between ${this.minLength} and ${this.maxLength}`;
+    }
+    else if (this.id === 'email') {
+      var emailInput = document.getElementById('email').value;
+      error = validators.validateEmail(emailInput)
+      }
+    else if (this.id === 'password') {
+      var pwInput = document.getElementById('password').value;
+      error = validators.validatePw(pwInput)
+      }
+    else if (this.id === 'confirm-password') {
+      var pwcInput = document.getElementById('confirm-password').value;
+      var pwInput = document.getElementById('password').value;
+      error = validators.validatePwc(pwInput, pwcInput)
+      }
+    else {
+      error = "";
+    }
+    document.getElementById(`${this.id}-error`).innerHTML = error;
+  },
+  // valEmail: function () {
+  //   var emailInput = document.getElementById('email');
+  //   email = emailInput.value
+  //   // console.log(emailInput.name)
+  //   if (!emailInput.validity.valid) {
+  //    return "Please enter a valid email address";
+  //  } else {
+  //    return "";
+  //  }
+  // },
+  validateEmail: function (email) {
+    var re = new RegExp ("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
+    if (!re.test(email)) {
+     return "Please enter a valid email address";
+    } else {
+     return "";
+   }
+  },
+  // valPw: function () {
+  //   var pwInput = document.getElementById('password');
+  //   console.log(pwInput.name);
+  //   var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  //   if (!re.test(pwInput.value)) {
+  //     return "Password must contain at least one number, one lowercase and one uppercase letter at least six characters";
+  //   } else {
+  //     return "";
+  //   }
+  // },
+  validatePw: function (password) {
+    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    if (!re.test(password)) {
+      return "Password must contain at least one number, one lowercase and one uppercase letter at least six characters";
+    } else {
+      return "";
+    }
+  },
+  // valPwc: function () {
+  //   var pwcInput = document.getElementById('confirm-password');
+  //   var pwInput = document.getElementById('password');
+  //   if (pwcInput.value !== pwInput.value) {
+  //     return "Password does not match";
+  //   } else {
+  //     return "";
+  //   }
+  // },
+  validatePwc: function (password, passwordconf) {
+    if (password !== passwordconf) {
+      return "Password does not match";
+    } else {
+      return "";
+    }
+  }
+}
+
 events.setUpEventListeners(window.location.href);
-var opportunities = [];
+
+// });
+
+
+
+
+
+
+// var opportunities = [];
 
 // var opportunity = {
 //   opName: opp,
@@ -90,5 +179,3 @@ var opportunities = [];
 //   role: roleDescription,
 //   apply: howToApply
 // }
-
-});
