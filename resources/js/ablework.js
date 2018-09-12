@@ -103,16 +103,6 @@ var validators = {
     }
     document.getElementById(`${this.id}-error`).innerHTML = error;
   },
-  // valEmail: function () {
-  //   var emailInput = document.getElementById('email');
-  //   email = emailInput.value
-  //   // console.log(emailInput.name)
-  //   if (!emailInput.validity.valid) {
-  //    return "Please enter a valid email address";
-  //  } else {
-  //    return "";
-  //  }
-  // },
   validateEmail: function (email) {
     var re = new RegExp ("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
     if (!re.test(email)) {
@@ -121,16 +111,6 @@ var validators = {
      return "";
    }
   },
-  // valPw: function () {
-  //   var pwInput = document.getElementById('password');
-  //   console.log(pwInput.name);
-  //   var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  //   if (!re.test(pwInput.value)) {
-  //     return "Password must contain at least one number, one lowercase and one uppercase letter at least six characters";
-  //   } else {
-  //     return "";
-  //   }
-  // },
   validatePw: function (password) {
     var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     if (!re.test(password)) {
@@ -139,15 +119,6 @@ var validators = {
       return "";
     }
   },
-  // valPwc: function () {
-  //   var pwcInput = document.getElementById('confirm-password');
-  //   var pwInput = document.getElementById('password');
-  //   if (pwcInput.value !== pwInput.value) {
-  //     return "Password does not match";
-  //   } else {
-  //     return "";
-  //   }
-  // },
   validatePwc: function (password, passwordconf) {
     if (password !== passwordconf) {
       return "Password does not match";

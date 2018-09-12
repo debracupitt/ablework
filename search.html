@@ -16,6 +16,7 @@
   <body>
     <div class="top-bar"></div>
     <div class="search-top column">
+      <i class="fas fa-plus rc-icon"></i>
       <h2>Jobs, Apprenticeships</br>and Training Programs</h2>
       <div class="filter row center" id="filter">
         <h3>Filter</h3>
@@ -43,20 +44,20 @@
         <label for="time2">Part Time Work</label>
 
         </br>
-        <button id="run-search">Filter</button>
+        <button id="run-search" type="button">Filter</button>
       </form>
     </div>
 
     <div class="row center tabs">
-      <div class="tab selected">
+      <div class="tab not-selected">
         <h3>Opportunities</h3>
       </div>
-      <div class="tab not-selected">
+      <div class="tab selected">
         <h3>Job Seekers</h3>
       </div>
     </div>
 
-    <main id="search">
+    <main class="search hide">
     <div class="column">
       <div class="row card">
         <div class="img-frame">
@@ -124,6 +125,75 @@
       </div>
     </div>
   </main>
+
+  <main class="search show">
+  <div class="column">
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-1.jpg" alt="Linh Vũ Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Linh Vu</h3>
+        <div>
+          <p>Part-time</p>
+          <h4>Hospitality</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-2.jpg" alt="Phuong Hoàng Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Phuong Hoang</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Hairdressing</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-3.jpg" alt="Quynh Nguyễn Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Quynh Nguyen</h3>
+        <div>
+          <p>Apprenticeship</p>
+          <h4>Accounting</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/LSHELL-sewing.png" alt="Minh Phạm Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Minh Pham</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Textiles</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-4.jpg" alt="Thu Trần Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Thu Tran</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Hospitality</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
   </body>
 
