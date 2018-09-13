@@ -58,6 +58,20 @@ var handlers = {
   toggleOpen: function () {
     const filterForm = document.querySelector('.search-form');
     filterForm.classList.toggle('show');
+  },
+  selectTab: function () {
+    var opportunities = document.getElementById('opportunities');
+    var jobseekers = document.getElementById('jobseekers');
+    var jobSearch = document.getElementById('jobSearch');
+    var pplSearch = document.getElementById('pplSearch');
+    opportunities.classList.toggle('selected');
+    opportunities.classList.toggle('not-selected');
+    jobseekers.classList.toggle('selected');
+    jobseekers.classList.toggle('not-selected');
+    jobSearch.classList.toggle('show');
+    jobSearch.classList.toggle('hide');
+    pplSearch.classList.toggle('show');
+    pplSearch.classList.toggle('hide');
   }
 }
 
@@ -71,7 +85,9 @@ var events = {
 
     if (url.includes("search")) {
       const filterButton = document.querySelector('.filter');
-      filterButton.addEventListener('click', handlers.toggleOpen)
+      const tab = document.querySelectorAll('.tab');
+      tab.forEach(tab => tab.addEventListener('click', handlers.selectTab));
+      filterButton.addEventListener('click', handlers.toggleOpen);
     }
   }
 }
