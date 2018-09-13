@@ -19,7 +19,7 @@ html {
 body {
   /* height: 100%; */
   /* padding: 0 0 60px; */
-  border: solid 0.2px white;
+  /* border: solid 0.2px white; */
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -428,6 +428,8 @@ li {
   width: 80%;
   background-color: white;
   color: #351645;
+  overflow: scroll;
+  max-height: 90vh;
 }
 
 .create-account h2 {

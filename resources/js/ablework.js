@@ -38,6 +38,32 @@ var users = {
 }
 
 var handlers = {
+  checkErrors: function () {
+    var error = "Could not create account as some information is incorrect. Please check your information again."
+    var inputs = document.querySelectorAll('.text-input-style')
+    var errors = document.querySelectorAll('.error')
+    var isError = false;
+    errors.forEach(error => {
+      if (error.textContent != "") {
+        isError = true;
+        return;
+      }
+    })
+    inputs.forEach(input => {
+      if (input.value === "") {
+        isError = true;
+        return;
+      }
+    })
+    if (isError) {
+      document.getElementById('submit-error').innerHTML = error;
+      return;
+    } else {
+      document.getElementById('submit-error').innerHTML = "";
+      handlers.createUser()
+      location.href = "search.html";
+    }
+  },
   createUser: function () {
     var type = function() {
       var type1 = document.getElementById('type1').checked;
@@ -78,9 +104,11 @@ var handlers = {
 var events = {
   setUpEventListeners: function(url) {
     if (url.includes("create-account")) {
-      var createBtn = document.getElementById('account-create');
+      // var createBtn = document.getElementById('account-create');
       var formInputs = document.querySelectorAll('.text-input-style');
+      var startBtn = document.getElementById('start-btn');
       formInputs.forEach(input => input.addEventListener('blur', validators.validate));
+      startBtn.addEventListener('click', handlers.checkErrors)
     }
 
     if (url.includes("search")) {
@@ -94,30 +122,70 @@ var events = {
 
 var validators = {
   validate: function () {
-    var error;
-    if (this.value === '') {
-      error = "This field is mandatory";
-    }
-    else if (this.value.length > this.maxLength || this.value.length < this.minLength) {
-      error = `Number of characters must be between ${this.minLength} and ${this.maxLength}`;
-    }
-    else if (this.id === 'email') {
-      var emailInput = document.getElementById('email').value;
-      error = validators.validateEmail(emailInput)
+    var error = "";
+    var errors = document.querySelectorAll('.error');
+    var formInputs = document.querySelectorAll('.text-input-style');
+    formInputs.forEach(input => {
+      var name = input.id;
+      if (input.value === '') {
+        error = "This field is mandatory";
+        document.getElementById(`${name}-error`).innerHTML = error;
       }
-    else if (this.id === 'password') {
-      var pwInput = document.getElementById('password').value;
-      error = validators.validatePw(pwInput)
+      else if (input.value.length > input.maxLength || input.value.length < input.minLength) {
+        error = `Number of characters must be between ${input.minLength} and ${input.maxLength}`;
+        document.getElementById(`${name}-error`).innerHTML = error;
+      } else if (input.value.length <= input.maxLength && input.value.length >= input.minLength) {
+        error = "";
+        document.getElementById(`${name}-error`).innerHTML = error;
       }
-    else if (this.id === 'confirm-password') {
-      var pwcInput = document.getElementById('confirm-password').value;
-      var pwInput = document.getElementById('password').value;
-      error = validators.validatePwc(pwInput, pwcInput)
+      if (input.id === 'email') {
+        var emailInput = document.getElementById('email').value;
+        emailError = validators.validateEmail(emailInput);
+        document.getElementById(`email-error`).innerHTML = emailError;
       }
-    else {
-      error = "";
-    }
-    document.getElementById(`${this.id}-error`).innerHTML = error;
+      if (input.id === 'password') {
+        var pwInput = document.getElementById('password').value;
+        pwError = validators.validatePw(pwInput);
+        document.getElementById(`password-error`).innerHTML = pwError;
+      }
+      if (input.id === 'confirm-password') {
+        var pwcInput = document.getElementById('confirm-password').value;
+        var pwInput = document.getElementById('password').value;
+        pwcError = validators.validatePwc(pwInput, pwcInput);
+        document.getElementById(`confirm-password-error`).innerHTML = pwcError;
+      }
+    })
+
+
+
+    //
+    //
+    //
+    // if (this.value === '') {
+    //   error = "This field is mandatory";
+    // }
+    // else if (this.value.length > this.maxLength || this.value.length < this.minLength) {
+    //   error = `Number of characters must be between ${this.minLength} and ${this.maxLength}`;
+    // }
+    // else if (this.id === 'email') {
+    //   var emailInput = document.getElementById('email').value;
+    //   error = validators.validateEmail(emailInput)
+    //   }
+    // else if (this.id === 'password') {
+    //   var pwInput = document.getElementById('password').value;
+    //   error = validators.validatePw(pwInput)
+    //   }
+    // else if (this.id === 'confirm-password') {
+    //   var pwcInput = document.getElementById('confirm-password').value;
+    //   var pwInput = document.getElementById('password').value;
+    //   error = validators.validatePwc(pwInput, pwcInput)
+    //   }
+    // else {
+    //   error = "";
+    //   errors.forEach(e => e.textContent = error);
+    // }
+    // document.getElementById(`${this.id}-error`).innerHTML = error;
+    // return error;
   },
   validateEmail: function (email) {
     var re = new RegExp ("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
