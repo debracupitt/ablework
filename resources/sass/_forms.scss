@@ -1,0 +1,193 @@
+input[type="checkbox"] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2714";
+  border: 2px solid #351645;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-right: 0.4em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #fff;
+  border-color: #351645;
+  color: #351645;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type="checkbox"]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+.close {
+  cursor: pointer;
+  text-align: right;
+}
+/* ------  Buttons Styling ------- */
+
+button {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  /* color: white; */
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+/* .on {
+  margin-right: 5px;
+}
+
+.off {
+  color: #351645;
+  margin-left: 5px;
+  margin-right: 0px;
+} */
+
+#run-search {
+  width: 50%;
+  background-color: #b54263;
+  color: white;
+}
+
+.login-btn {
+  margin: 15px 0 0 0;
+  height: 45px;
+}
+
+.secondary {
+  background: rgba(76, 175, 80, 0);
+  color: white;
+}
+
+/* --- Account Form --- */
+
+.account-form {
+  box-sizing: border-box;
+  /* padding: 10px 0; */
+}
+
+.account-form ul {
+  list-style: none;
+}
+
+.text-label-style {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: normal;
+  padding: 10px 0 0 8px;
+}
+
+.text-input-style {
+  padding: 10px;
+  width: 90%;
+  border: solid #351645 1px;
+  border-radius: 10px;
+  margin: 2px 0 3px 0;
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+.radio-label-style {
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  left: -24px;
+}
+
+.create-account .form-error {
+  font-size: 11px;
+  color: red;
+  padding: 0 0 0 8px;
+}
+
+/* input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+} */
+
+/* --- Radio button styling --- */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #603e71;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #351645;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #603e71;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
