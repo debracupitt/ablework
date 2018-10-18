@@ -1,0 +1,34 @@
+// Color Names
+$white: #ffffff;
+$black: #000000;
+$grey: #757575;
+$lgreen: #11e3ba;
+$mgreen: #0dab8c;
+$pink: #e19dd0;
+$lpink: #f5deef;
+$dpink: #672e58;
+
+// Layout (e.g. spacing)
+
+// Fonts
+// font-size
+$xlarge: 2.5rem;
+$large: 1.75rem;
+$big-medium: 1.5rem;
+$medium: 1.3rem;
+$regular: 1rem;
+
+// font-weight
+$x-bold: 900;
+$bold: 800;
+$regular: 300;
+
+// z-index
+$z-1: 1; // bottom-most layer - general basic positioning
+$z-2: 2; // general basic positioning
+$z-3: 3; // general basic positioning
+$popup: 100; // tooltips
+$modal-backdrop: 999; // transparent black backdrop behind modal popup
+$modal-container: 1000;
+$modal-content: 1001;
+$modal-controls: 1100; // e.g. close button
