@@ -13,7 +13,7 @@
   <body>
     <div class="top-bar"></div>
     <div class="search-top column">
-      <i class="fas fa-plus rc-icon"></i>
+      <i class="fas fa-plus rc-icon" id="new-resource"></i>
       <h2>Tips for Jobseekers</br>and Employers</h2>
 
       <div class="filter row center" id="filter">
@@ -33,7 +33,184 @@
       </form>
     </div>
 
-    <main class="search show" id="jobSearch">
+    <form class="popup-form resource-form">
+      <h2>Share a Resource </br>the AbleWork Community</h2></br>
+      <label for="resource-name">Resource Title</label></br>
+      <input class="text-input-style" type="text" id="resource-name">
+      </br></br>
+
+      <label for="resource-link">Link</label></br>
+      <input class="text-input-style" type="text" id="resource-link">
+      </br></br>
+
+      <label for="date-created">Date Resource Created</label></br>
+      <input class="text-input-style" type="date" id="date-created" name="Date">
+      </br></br>
+
+      <label for="resource-type">Type of Resource</label></br>
+      <select name="resource-type">
+        <option value="article">Article</option>
+        <option value="video">Video</option>
+        <option value="podcast">Podcast</option>
+        <option value="other">Other</option>
+      </select>
+      </br>
+      </br>
+      <button class="btn-main" id="submit-resource" type="button">Submit</button>
+      <button class="btn-secondary" id="close-resource" type="button">Close</button>
+      </br></br>
+    </form>
+
+    <main class="cards-container" id="jobSearch">
+    <div class="column">
+      <div class="row card event">
+        <div class="text-wrap">
+          <h3>Cooking Workshop & Language Exchange in Hanoi</h3>
+          <div>
+            <p>Sat, Sep 29, 4:00pm</p>
+            <h4>FREE</h4>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.fr/e/billets-cooking-workshop-language-exchange-in-hanoi-50570267030?aff=ebdssbdestsearch" target="_blank">
+        <div class="column event-frame">
+          <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+      </a>
+      </div>
+
+      <div class="row card event">
+        <div class="text-wrap">
+          <h3>The IB & UK Universities – Making the Most of Your Choices, Hanoi</h3>
+          <div>
+            <p>Tue, Nov 6, 6:00pm</p>
+            <h4>FREE</h4>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.sg/e/the-ib-uk-universities-making-the-most-of-your-choices-hanoi-tickets-49814242741?aff=ebdssbdestsearch" target="_blank">
+        <div class="column event-frame">
+          <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+      </a>
+      </div>
+
+      <div class="row card event">
+        <div class="text-wrap">
+          <h3>BEAUTYCARE EXPO 2019</h3>
+          <div>
+            <p>Wed, Jan 9, 9:00am</p>
+            <h4>FREE</h4>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.com/e/beautycare-expo-2019-tickets-44750712586?aff=ebdssbdestsearch" target="_blank">
+        <div class="column event-frame">
+          <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+      </a>
+      </div>
+
+      <div class="row card event">
+        <div class="text-wrap">
+          <h3>HDP Analyst: Data Science - Hortonworks Official Curriculum</h3>
+          <div>
+            <p>Wed, Oct 3, 9:00am</p>
+            <h4>Starts at $2,124.95</h4>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.com/e/hdp-analyst-data-science-hortonworks-official-curriculum-tickets-44281394844?aff=ebdssbdestsearch" target="_blank">
+        <div class="column event-frame">
+          <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+      </a>
+      </div>
+
+      <div class="row card event">
+        <div class="text-wrap">
+          <h3>PMBOK/Agile/Scrum Dành Cho Các Cấp Quản Lý</h3>
+          <div>
+            <p>Sat, Oct 27, 8:00am</p>
+            <h4>FREE</h4>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.com/e/pmbokagilescrum-danh-cho-cac-cap-quan-ly-tickets-48381669877?aff=ebdssbdestsearch" target="_blank">
+        <div class="column event-frame">
+          <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+        </div>
+      </a>
+      </div>
+    </div>
+  </main>
+
+  <main class="search hide" id="pplSearch">
+  <div class="column">
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-1.jpg" alt="Linh Vũ Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Linh Vu</h3>
+        <div>
+          <p>Part-time</p>
+          <h4>Hospitality</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-2.jpg" alt="Phuong Hoàng Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Phuong Hoang</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Hairdressing</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-3.jpg" alt="Quynh Nguyễn Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Quynh Nguyen</h3>
+        <div>
+          <p>Apprenticeship</p>
+          <h4>Accounting</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/profile-pic-4.jpg" alt="Thu Trần Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Thu Tran</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Hospitality</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row card">
+      <div class="img-frame">
+        <img src="resources/images/LSHELL-sewing.png" alt="Minh Phạm Profile Picture">
+      </div>
+      <div class="text-wrap">
+        <h3>Minh Pham</h3>
+        <div>
+          <p>Full-time</p>
+          <h4>Textiles</h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+    <!-- <main class="search show" id="jobSearch">
     <div class="column">
       <div class="row card">
         <div class="img-frame">
@@ -100,7 +277,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </main> -->
 
   <main class="search hide" id="pplSearch">
   <div class="column">

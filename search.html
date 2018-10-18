@@ -13,7 +13,7 @@
   <body>
     <div class="top-bar"></div>
     <div class="search-top column">
-      <i class="fas fa-plus rc-icon"></i>
+      <i class="fas fa-plus rc-icon" id="new-opp"></i>
       <h2>Jobs, Apprenticeships</br>and Training Programs</h2>
       <div class="filter row center" id="filter">
         <h3>Filter</h3>
@@ -46,6 +46,70 @@
       </form>
     </div>
 
+    <form class="popup-form opp-form">
+      <h2>Post a new opportunity to</br>the AbleWork Community</h2></br>
+      <hr class="hr-purple">
+      <h3>About the Role</h3></br>
+
+      <label for="opp-name">Opportunity Title</label></br>
+      <input class="text-input-style" type="text" id="opp-name">
+      </br></br>
+      <label for="opp-description">Brief Description</label></br>
+      <textarea class="text-input-style long-form" type="text" id="opp-description">Describe the opportunity here...</textarea>
+      </br></br>
+
+      <label for="opp-sector">Sector</label></br>
+      <div class="rounded">
+        <select name="opp-sector">
+          <option value="hospitality">Hospitality</option>
+          <option value="business">Business</option>
+          <option value="it">IT</option>
+          <option value="textiles">Textiles</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      </br>
+
+      <label for="opp-link">Link to more information</label></br>
+      <input class="text-input-style" type="text" id="opp-link">
+      </br></br>
+
+      <label for="close-date">Date Applications Close</label></br>
+      <input class="text-input-style" type="date" id="close-date" name="close-date">
+      </br></br>
+
+      <hr class="hr-purple">
+
+      <h3>Work Hours</h3></br>
+
+      <input type="checkbox" id="time-a" name="Full Time Work" value="Full Time Work">
+      <label for="time-a">Full Time Work</label>
+
+      <input type="checkbox" id="time-b" name="Part Time Work" value="Part Time Work">
+      <label for="time-b">Part Time Work</label>
+
+      <input type="checkbox" id="time-c" name="Part Time Work" value="Part Time Work">
+      <label for="time-c">Casual Work</label>
+
+      <hr class="hr-purple">
+      <h3>Accessibility Support</h3></br>
+
+      <input type="checkbox" id="blind" name="Blind" value="Blind">
+      <label for="blind">Blind</label>
+
+      <input type="checkbox" id="deaf" name="Deaf" value="Deaf">
+      <label for="deaf">Deaf</label>
+
+      <input type="checkbox" id="mobility-issues" name="Mobility Issues" value="Mobility Issues">
+      <label for="mobility-issues">Mobility Issues</label>
+      </br></br>
+
+
+      <button class="btn-main" id="submit-opp" type="button">Submit</button>
+      <button class="btn-secondary" id="close-opp" type="button">Close</button>
+      </br></br>
+    </form>
+
     <div class="row center tabs">
       <div class="tab selected" id="opportunities">
         <h3>Opportunities</h3>
@@ -55,7 +119,7 @@
       </div>
     </div>
 
-    <main class="search show" id="jobSearch">
+    <main class="cards-container show" id="jobSearch">
     <div class="column">
       <div class="row card">
         <div class="img-frame">
@@ -124,7 +188,7 @@
     </div>
   </main>
 
-  <main class="search hide" id="pplSearch">
+  <main class="cards-container hide" id="pplSearch">
   <div class="column">
     <div class="row card">
       <div class="img-frame">

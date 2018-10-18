@@ -92,6 +92,14 @@ var handlers = {
     const eventForm = document.querySelector(".event-form");
     eventForm.classList.toggle("show");
   },
+  toggleResource: function() {
+    const resourceForm = document.querySelector(".resource-form");
+    resourceForm.classList.toggle("show");
+  },
+  toggleOpp: function() {
+    const oppForm = document.querySelector(".opp-form");
+    oppForm.classList.toggle("show");
+  },
   selectTab: function() {
     var opportunities = document.getElementById("opportunities");
     var jobseekers = document.getElementById("jobseekers");
@@ -134,8 +142,16 @@ var events = {
     }
 
     if (url.includes("search")) {
+      // Switch tabs
       const tab = document.querySelectorAll(".tab");
       tab.forEach(tab => tab.addEventListener("click", handlers.selectTab));
+      // Create Opportunity
+      const newOpp = document.getElementById("new-opp");
+      const submitOpp = document.getElementById("submit-opp");
+      const closeOpp = document.getElementById("close-opp");
+      newOpp.addEventListener("click", handlers.toggleOpp);
+      submitOpp.addEventListener("click", handlers.toggleOpp);
+      closeOpp.addEventListener("click", handlers.toggleOpp);
     }
 
     if (url.includes("events")) {
@@ -146,6 +162,16 @@ var events = {
       newEvent.addEventListener("click", handlers.toggleEvent);
       submitEvent.addEventListener("click", handlers.toggleEvent);
       closeEvent.addEventListener("click", handlers.toggleEvent);
+    }
+
+    if (url.includes("tips")) {
+      // Create Resource
+      const newResource = document.getElementById("new-resource");
+      const submitResource = document.getElementById("submit-resource");
+      const closeResource = document.getElementById("close-resource");
+      newResource.addEventListener("click", handlers.toggleResource);
+      submitResource.addEventListener("click", handlers.toggleResource);
+      closeResource.addEventListener("click", handlers.toggleResource);
     }
   }
 };

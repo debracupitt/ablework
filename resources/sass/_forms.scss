@@ -1,3 +1,16 @@
+select {
+  padding: 10px;
+  height: 43px;
+  background-color: white;
+  width: 92%;
+  border: solid #351645 1px;
+  border-radius: 10px;
+  margin: 2px 0 3px 0;
+  font-size: 13px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
 input[type="checkbox"] + label {
   display: block;
   margin: 0.2em;
@@ -45,7 +58,10 @@ input[type="checkbox"]:checked:disabled + label:before {
 .close {
   cursor: pointer;
   text-align: right;
+  text-decoration: none;
+  font-weight: 300;
 }
+
 /* ------  Buttons Styling ------- */
 
 button {
@@ -90,7 +106,6 @@ button {
 
 .account-form {
   box-sizing: border-box;
-  /* padding: 10px 0; */
 }
 
 .account-form ul {
@@ -190,27 +205,7 @@ button {
   transform: scale(1);
 }
 
-.filter-form {
-  display: none;
-  width: 80%;
-  background: rgba(255, 255, 255, 0.95);
-  text-align: left;
-  position: absolute;
-  top: 22%;
-  left: 10%;
-  z-index: 10;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  box-sizing: border-box;
-  user-select: none;
-  color: var(--dark-purple);
-
-  &.tips-filter {
-    top: 32%;
-  }
-}
-
-.event-form {
+.popup-form {
   display: none;
   width: 80%;
   background: rgba(255, 255, 255, 0.98);
@@ -224,7 +219,34 @@ button {
   box-sizing: border-box;
   user-select: none;
   color: var(--dark-purple);
+  margin-bottom: 65px;
   h2 {
     text-align: center;
+  }
+  .long-form {
+    resize: none;
+    height: 150px;
+  }
+}
+
+.filter-form {
+  display: none;
+  width: 75%;
+  background: white;
+  text-align: left;
+  position: absolute;
+  top: 183px;
+  left: 12.5%;
+  z-index: 10;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px 15px;
+  box-sizing: border-box;
+  user-select: none;
+  color: var(--dark-purple);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  &.tips-filter {
+    top: 183px;
   }
 }
