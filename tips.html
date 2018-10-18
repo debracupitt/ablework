@@ -4,9 +4,6 @@
     <title>Tips</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="resources/css/reset.css">
-    <link rel="stylesheet" href="resources/css/fonts.css">
-    <link rel="stylesheet" href="resources/css/forms-and-buttons.css"> -->
     <link rel="stylesheet" href="resources/css/main.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -18,33 +15,21 @@
     <div class="search-top column">
       <i class="fas fa-plus rc-icon"></i>
       <h2>Tips for Jobseekers</br>and Employers</h2>
+
       <div class="filter row center" id="filter">
         <h3>Filter</h3>
         <i class="fas fa-angle-down"></i>
       </div>
-      <form class="search-form">
-        <input type="checkbox" id="sector1" name="Hospitality" value="Hospitality">
-        <label for="sector1">Hospitality</label>
+      <form class="filter-form tips-filter">
+        <input type="checkbox" id="jobseekers" name="Tips for Jobseekers" value="Tips for Jobseekers">
+        <label for="jobseekers">Tips for Jobseekers</label>
 
-        <input type="checkbox" id="sector2" name="Textiles" value="Textiles">
-        <label for="sector2">Textiles</label>
-
-        <input type="checkbox" id="sector3" name="Finance" value="Finance">
-        <label for="sector3">Finance</label>
-
-        <input type="checkbox" id="sector4" name="Software Development" value="Software Development">
-        <label for="sector4">Software Development</label>
-
-        <hr class="hr-purple">
-
-        <input type="checkbox" id="time1" name="Full Time Work" value="Full Time Work">
-        <label for="time1">Full Time Work</label>
-
-        <input type="checkbox" id="time2" name="Part Time Work" value="Part Time Work">
-        <label for="time2">Part Time Work</label>
+        <input type="checkbox" id="employers" name="Tips for Employers" value="Tips for Employers">
+        <label for="employers">Tips for Employers</label>
 
         </br>
-        <button id="run-search" type="button">Filter</button>
+        <button class="btn-main" id="run-filter" type="button">Filter</button>
+        <button class="btn-secondary" id="close-filter" type="button">Close</button>
       </form>
     </div>
 

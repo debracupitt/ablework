@@ -4,9 +4,6 @@
     <title>Search</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="resources/css/reset.css">
-    <link rel="stylesheet" href="resources/css/fonts.css">
-    <link rel="stylesheet" href="resources/css/forms-and-buttons.css"> -->
     <link rel="stylesheet" href="resources/css/main.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -22,7 +19,7 @@
         <h3>Filter</h3>
         <i class="fas fa-angle-down"></i>
       </div>
-      <form class="search-form">
+      <form class="filter-form">
         <input type="checkbox" id="sector1" name="Hospitality" value="Hospitality">
         <label for="sector1">Hospitality</label>
 
@@ -44,7 +41,8 @@
         <label for="time2">Part Time Work</label>
 
         </br>
-        <button id="run-search" type="button">Filter</button>
+        <button class="btn-main" id="run-filter" type="button">Filter</button>
+        <button class="btn-secondary" id="close-filter" type="button">Close</button>
       </form>
     </div>
 

@@ -4,9 +4,6 @@
     <title>Events</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="resources/css/reset.css">
-    <link rel="stylesheet" href="resources/css/fonts.css">
-    <link rel="stylesheet" href="resources/css/forms-and-buttons.css"> -->
     <link rel="stylesheet" href="resources/css/main.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -16,13 +13,13 @@
   <body>
     <div class="top-bar"></div>
     <div class="search-top column">
-      <i class="fas fa-plus rc-icon"></i>
+      <i class="fas fa-plus rc-icon" id="new-event"></i>
       <h2>Networking, Training </br>and Inspiring Events</h2>
       <div class="filter row center" id="filter">
         <h3>Filter</h3>
         <i class="fas fa-angle-down"></i>
       </div>
-      <form class="search-form">
+      <form class="filter-form">
         <input type="checkbox" id="sector1" name="Hospitality" value="Hospitality">
         <label for="sector1">Hospitality</label>
 
@@ -44,7 +41,8 @@
         <label for="time2">Part Time Work</label>
 
         </br>
-        <button id="run-search" type="button">Filter</button>
+        <button class="btn-main" id="run-filter" type="button">Filter</button>
+        <button class="btn-secondary" id="close-filter" type="button">Close</button>
       </form>
     </div>
 
@@ -74,14 +72,10 @@
       <input type="checkbox" id="start-price" name="start" value="start">
       <label for="start-price">Other higher priced tickets available?</label>
 
-      <!-- </br> -->
-
       </br>
-      <button id="run-search" type="button">Submit Event</button>
-
+      <button class="btn-main" id="submit-event" type="button">Submit Event</button>
+      <button class="btn-secondary" id="close-event" type="button">Close </button>
       </br></br>
-
-      <h4>CLOSE FORM</h4>
     </form>
 
     <main class="search show" id="jobSearch">
