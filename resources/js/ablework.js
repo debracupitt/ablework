@@ -100,6 +100,14 @@ var handlers = {
     const oppForm = document.querySelector(".opp-form");
     oppForm.classList.toggle("show");
   },
+  toggleProfile: function() {
+    const profileForm = document.querySelector(".profile-form");
+    profileForm.classList.toggle("show");
+  },
+  toggleBiz: function() {
+    const profileForm = document.querySelector(".biz-form");
+    profileForm.classList.toggle("show");
+  },
   selectTab: function() {
     var opportunities = document.getElementById("opportunities");
     var jobseekers = document.getElementById("jobseekers");
@@ -172,6 +180,26 @@ var events = {
       newResource.addEventListener("click", handlers.toggleResource);
       submitResource.addEventListener("click", handlers.toggleResource);
       closeResource.addEventListener("click", handlers.toggleResource);
+    }
+
+    if (url.includes("jobs")) {
+      // Edit Profile
+      const editButton = document.getElementById("edit-profile");
+      const saveProfile = document.getElementById("save-profile");
+      const closeProfile = document.getElementById("close-profile");
+      editButton.addEventListener("click", handlers.toggleProfile);
+      saveProfile.addEventListener("click", handlers.toggleProfile);
+      closeProfile.addEventListener("click", handlers.toggleProfile);
+    }
+
+    if (url.includes("business")) {
+      // Edit Profile
+      const editButton = document.getElementById("edit-biz");
+      const saveProfile = document.getElementById("save-biz");
+      const closeProfile = document.getElementById("close-biz");
+      editButton.addEventListener("click", handlers.toggleBiz);
+      saveProfile.addEventListener("click", handlers.toggleBiz);
+      closeProfile.addEventListener("click", handlers.toggleBiz);
     }
   }
 };

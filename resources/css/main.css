@@ -186,6 +186,48 @@ a {
   padding-top: 3px;
 }
 
+.filupp input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: #351645;
+  border: 0;
+}
+
+.filupp {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  font-size: 1em;
+  width: 100%;
+  height: 35px;
+  color: #351645;
+  cursor: pointer;
+}
+
+.filupp:before {
+  position: absolute;
+  top: 1.5em;
+  right: 0.75em;
+  width: 2em;
+  height: 1.25em;
+  border: 3px solid #351645;
+  border-top: 0;
+  text-align: center;
+}
+
+.filupp-file-name {
+  width: 75%;
+  padding-left: 2px;
+}
+
+.filupp-file-name i {
+  padding-right: 10px;
+}
+
 select {
   padding: 10px;
   height: 43px;
@@ -329,10 +371,6 @@ button {
   padding: 0 0 0 8px;
 }
 
-/* input:invalid{
-  border-color: #900;
-  background-color: #FDD;
-} */
 /* --- Radio button styling --- */
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -746,11 +784,11 @@ li {
   color: var(--main-pink);
 }
 
-.event {
+.external {
   justify-content: space-between;
 }
 
-.event-frame {
+.external-frame {
   width: 130px;
   height: 100px;
   background-color: var(--light-pink);
@@ -758,7 +796,7 @@ li {
   text-align: center;
 }
 
-.event a {
+.external a {
   font-size: 15px;
   font-weight: 500;
   line-height: normal;

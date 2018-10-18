@@ -10,7 +10,7 @@
   <body>
     <div class="top-bar"></div>
     <div class="profile-top">
-      <i class="fa fa-pencil-alt rc-icon"></i>
+      <i class="fa fa-pencil-alt rc-icon" id="edit-profile"></i>
       <div class="profile-pic vn">
         <!-- profile pic goes here -->
       </div>
@@ -24,6 +24,116 @@
         <span>I want to work in the sewing industry part-time.</span>
       </div>
     </div>
+
+    <form class="popup-form profile-form">
+      <h2>Edit Your Profile</h2></br>
+
+      <label>Profile Image</label>
+      <label for="custom-file-upload" class="filupp">
+        <span class="filupp-file-name js-value"><i class="fas fa-upload"></i>Upload Profile Image</span>
+        <input type="file" name="attachment-file" value="1" id="custom-file-upload"/>
+      </label>
+
+      <h4>luyen-profile.jpg</h4>
+      </br>
+
+      <label for="full-name">Full Name</label></br>
+      <input class="text-input-style" type="text" id="full-name">
+      </br></br>
+
+      <label for="bio">Brief Bio</label></br>
+      <textarea class="text-input-style long-form" type="text" id="bio">Describe yourself here...</textarea>
+      </br></br>
+
+      <label for="skills">Skills</label></br>
+      <textarea class="text-input-style long-form" type="text" id="skills">List your skills here...</textarea>
+      </br></br>
+
+      <label>Resume</label>
+      <label for="custom-file-upload" class="filupp">
+        <span class="filupp-file-name js-value"><i class="fas fa-upload"></i>Upload Resume</span>
+        <input type="file" name="attachment-file" value="1" id="custom-file-upload"/>
+      </label>
+      <h4>luyen-resume.jpg</h4>
+      </br>
+
+      <hr class="hr-purple">
+
+      <h3>Seeking</h3></br>
+
+      <input type="checkbox" id="employment" name="Employment" value="Employment">
+      <label for="employment">Employment</label>
+
+      <input type="checkbox" id="training" name="Training" value="Training">
+      <label for="training">Training</label>
+
+      <input type="checkbox" id="apprenticeship" name="Apprenticeship" value="Apprenticeship">
+      <label for="apprenticeship">Apprenticeship</label>
+
+      </br>
+
+      <h3>Ideal Hours</h3></br>
+
+      <input type="checkbox" id="time-a" name="Full Time" value="Full Time">
+      <label for="time-a">Full Time</label>
+
+      <input type="checkbox" id="time-b" name="Part Time" value="Part Time">
+      <label for="time-b">Part Time</label>
+
+      <input type="checkbox" id="time-c" name="Casual" value="Casual">
+      <label for="time-c">Casual</label></br></br>
+
+      <h3>Sectors of Interest</h3></br>
+
+      <input type="checkbox" id="hospitality" name="Hospitality" value="Hospitality">
+      <label for="hospitality">Hospitality</label>
+
+      <input type="checkbox" id="business" name="Business" value="Business">
+      <label for="business">Business</label>
+
+      <input type="checkbox" id="textiles" name="Textiles" value="Textiles">
+      <label for="textiles">Textiles</label>
+      </br>
+
+      <label for="other-disability">Other</label></br>
+      <input class="text-input-style" type="text" id="other-disability">
+      </br></br>
+
+      <hr class="hr-purple">
+      <h3>Accessibility Support Required</h3></br>
+
+      <input type="checkbox" id="blind" name="Blind" value="Blind">
+      <label for="blind">Blind / Vision Impairment</label>
+
+      <input type="checkbox" id="deaf" name="Deaf" value="Deaf">
+      <label for="deaf">Deaf / Hearing Impairment</label>
+
+      <input type="checkbox" id="mobility-issues" name="Mobility Issues" value="Mobility Issues">
+      <label for="mobility-issues">Mobility Issues</label>
+      </br>
+      <label for="other-disability">Other</label></br>
+      <input class="text-input-style" type="text" id="other-disability">
+      </br></br>
+
+      <hr class="hr-purple">
+      <h3>Contact Information</h3></br>
+
+      <label for="email">Email</label></br>
+      <input class="text-input-style" type="text" id="email">
+      </br></br>
+
+      <label for="mobile">Mobile (optional)</label></br>
+      <input class="text-input-style" type="text" id="mobile">
+      </br></br>
+
+      <label for="linkedin">LinkedIn Profile (optional)</label></br>
+      <input class="text-input-style" type="text" id="linkedin">
+      </br></br>
+
+      <button class="btn-main" id="save-profile" type="button">Save</button>
+      <button class="btn-secondary" id="close-profile" type="button">Close</button>
+      </br></br>
+    </form>
 
     <div class="view-opp column">
       <i class="fas fa-file-alt view-opp-icon"></i>
@@ -105,5 +215,5 @@
       </div>
     </nav>
   </footer>
-
+  <script src="resources/js/ablework.js" type="text/javascript"></script>
 </html>

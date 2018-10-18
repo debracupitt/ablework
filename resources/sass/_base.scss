@@ -307,11 +307,11 @@ li {
   color: var(--main-pink);
 }
 
-.event {
+.external {
   justify-content: space-between;
 }
 
-.event-frame {
+.external-frame {
   width: 130px;
   height: 100px;
   background-color: var(--light-pink);
@@ -319,7 +319,7 @@ li {
   text-align: center;
 }
 
-.event a {
+.external a {
   font-size: 15px;
   font-weight: 500;
   line-height: normal;
