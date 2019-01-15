@@ -13,7 +13,7 @@ If you would like to see the to-do list, you will need to request to join the te
 The numbers on the trello board e.g. (3) are from scrum. These are to give the tasks rough numbers based on how long they will take / a time limit to place on them. There is a google chrome extension for trello and scrum numbers here: https://chrome.google.com/webstore/detail/scrum-for-trello/jdbcdblgjdpmfninkoogcfpnkjmndgje?utm_source=gmail
 
 ## The Challenge
-People (Vietnamese) with disabilities lack full access to employment opportunities due to societal and cultural norms.
+People with disabilities lack full access to employment opportunities due to societal and cultural norms.
 
 
 **The due date for this hackathon project is Oct 14, 2018.**
@@ -23,7 +23,7 @@ People (Vietnamese) with disabilities lack full access to employment opportuniti
 **User Profiles**
 1. Profile for persons with a disability
     * Resume upload
-    * Bio, skills and (work?) interests list
+    * Bio, skills and (work) interests list
     * Personal Story
 
 2. Profile for business employing people with disability / organisation that runs training programs for businesses / persons with disabilities
