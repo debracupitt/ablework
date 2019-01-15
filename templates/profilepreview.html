@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Profile
+{% endblock %}
+
+{% block main %}
+
+    <div class="banner profile-wrapper">
+
+      <div class="title profile">
+        <i class="fa fa-pencil-alt rc-icon mobile" id="edit-profile"></i>
+        <h1>{{ fname }} {{ lname }}</h1>
+        <button class="desktop bannerbtn" id="edit-profile-btn">EDIT DETAILS</button>
+      </div>
+      <div class="callout">
+          <h2>"{{ onesent }}"</h2>
+      </div>
+
+    </div>
+
+    <div class="profile-info">
+      <div class="section">
+        <h3>Skills</h3><br/>
+        <p>{{ skills }}</p>
+      </div>
+      <hr>
+      <div class="section">
+        <h3>Bio</h3><br/>
+        <p>{{ bio }}</p>
+      </div>
+      <hr>
+      <div class="section">
+        <h3>Secret Power</h3><br/>
+        <p>{{ disabilities }}</p>
+      </div>
+      <hr>
+      <div class="section">
+        <h3>Contact</h3><br/>
+        <div class="row">
+          <i class="fas fa-phone"></i>
+          <div class="wrap-sides">
+            <p>{{ mobile }}</p>
+            <p class="small">Mobile</p>
+            </br>
+          </div>
+        </div>
+        <div class="row">
+          <i class="far fa-envelope"></i>
+          <div class="wrap-sides">
+            <p>{{ email }}</p>
+            <p class="small">Email</p>
+            </br>
+          </div>
+        </div>
+        <div class="row">
+          <i class="fas fa-comment-alt"></i>
+          <div class="wrap-sides">
+            <a href="{{ linkedin }}" target="_blank"><p>{{ fname }} {{ lname }}'s Profile</p></a>
+            <p class="small">LinkedIn</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  {% endblock %}

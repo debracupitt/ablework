@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips
+{% endblock %}
+
+
+{% block main %}
+
+    <div class="banner">
+
+      <div class="title">
+        <i class="fas fa-plus rc-icon mobile" id="new-resource"></i>
+        <h1>Tips for Jobseekers</br>and Employers</h1>
+        <button class="desktop bannerbtn" id="new-resource-btn">SUGGEST RESOURCE</button>
+      </div>
+
+    </div>
+
+    <!-- <div class="filter row center" id="filter">
+      <h3>Filter</h3>
+      <i class="fas fa-angle-down"></i>
+    </div>
+    <form class="filter-form tips-filter">
+      <input type="checkbox" id="jobseekers" name="Tips for Jobseekers" value="Tips for Jobseekers">
+      <label for="jobseekers">Tips for Jobseekers</label>
+
+      <input type="checkbox" id="employers" name="Tips for Employers" value="Tips for Employers">
+      <label for="employers">Tips for Employers</label>
+
+      </br>
+      <button class="btn-main" id="run-filter" type="button">Filter</button>
+      <button class="btn-secondary" id="close-filter" type="button">Close</button>
+    </form> -->
+
+    <form class="popup-form resource-form" action="/blog" method="post">
+      <h2>Share a Resource with</br>the AbleWork Community</h2></br>
+      <label for="name">Resource Title</label></br>
+      <input class="text-input-style" type="text" name="name">
+      </br></br>
+
+      <label for="link">Link</label></br>
+      <input class="text-input-style" type="text" name="link">
+      </br></br>
+
+      <label for="date">Date Resource Created</label></br>
+      <input class="text-input-style" type="date" name="date">
+      </br></br>
+
+      <label for="type">Type of Resource</label></br>
+      <select name="type">
+        <option value="1">Article</option>
+        <option value="2">Video</option>
+        <option value="3">Podcast</option>
+        <option value="4">Other</option>
+      </select>
+      </br>
+      </br>
+      <button class="btn-main" id="submit-resource" type="submit">Submit</button>
+      <button class="btn-secondary" id="close-resource" type="button">Close</button>
+      </br></br>
+    </form>
+
+    <div class="cards-container">
+
+      {% for resource in resources %}
+
+      <div class="row card external">
+        <div class="text-wrap">
+          <h3>{{ resource.name }}</h3>
+          <div>
+            <p>{{ resource.date }}</p>
+            <h4>{{ resource.type }}</h4>
+          </div>
+        </div>
+        <a href="{{ resource.link }}" target="_blank">
+          <div class="external-frame">
+            <h3>View Resource </br> <i class="fas fa-arrow-right"></i> </h3>
+          </div>
+        </a>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  {% endblock %}

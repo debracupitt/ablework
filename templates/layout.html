@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="shortcut icon" type="image/png" href="../static/images/favicon.png"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="../static/css/styles2.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div class="top-bar"></div>
+    <div class="navbar desktop">
+      <div class="logo">
+        <img src="../static/images/ableWorkLogo-white-900x450.png" alt="Able Work Logo">
+      </div>
+      <nav>
+        <span><a href="/explore">Explore</a></span>
+        <span><a href="/events">Events</a></span>
+        <span><a href="/blog">Blog</a></span>
+        <span><a href="/profile">Profile</a></span>
+      </nav>
+    </div>
+
+    <div class="navbar mobile">
+      <span><a class="nav-item" href="/explore">
+        <div class="column">
+          <i class="fas fa-search"></i>
+          <span>Explore</span>
+        </div>
+      </a></span>
+      <span><a class="nav-item" href="/events">
+        <div class="column">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Events</span>
+        </div></a></span>
+      <span><a class="nav-item" href="/blog">
+        <div class="column">
+          <i class="far fa-lightbulb"></i>
+          <span>Tips</span>
+        </div>
+      </a></span>
+      <span><a class="nav-item" href="/profile">
+        <div class="column">
+          <i class="fa fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </a></span>
+    </div>
+
+      {% block main %}{% endblock %}
+
+    <script src="../static/js/ablework.js" type="text/javascript"></script>
+
+  </body>
+
+  <footer>
+  </footer>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no no-cache"/>
+
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/png" href="../static/images/favicon.png"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="../static/css/styles2.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+
+  </head>
+
+  <body class="login">
+
+    <div class="column space-around">
+
+        <img src="../static/images/ableWorkLogo-white-900x450.png" alt="Able Work Logo" class="logo2">
+
+      <div class="login-buttons">
+        <form class="account-form" autocomplete="off" action="/login" method="post">
+          <label class="text-label-style" for="email">Email</label></br>
+          <input class="text-input-style" type="email" name="email" placeholder="" maxlength="30" minlength="1" autofocus>
+
+          <label class="text-label-style" for="password">Password</label></br>
+          <input class="text-input-style" type="password" name="password" maxlength="30" minlength="1" placeholder="" autofocus>
+
+          <button class="login-btn" type="submit">LOGIN NOW</button>
+        </form>
+
+        <a href="/register"><button class="login-btn secondary" id="create-account-btn" type="button" >CREATE ACCOUNT</button></a>
+
+      </div>
+
+    </div>
+
+  <script src="../static/js/ablework.js" type="text/javascript"></script>
+
+</html>

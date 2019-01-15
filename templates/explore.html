@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block main %}
+
+    <div class="banner">
+
+      <div class="title">
+        <i class="fas fa-plus rc-icon mobile" id="new-opp"></i>
+        <h1>Jobs, Apprenticeships</br>and Training Programs</h1>
+        <button class="desktop bannerbtn" id="new-opp-btn">ADD OPPORTUNITY</button>
+      </div>
+
+      <!-- <div class="filter-dropdown row center" id="filter">
+        <h3>Filter</h3>
+        <i class="fas fa-angle-down"></i>
+      </div> -->
+
+      <!-- <form class="filter-form">
+        <input type="checkbox" id="sector1" name="Hospitality" value="Hospitality">
+        <label for="sector1">Hospitality</label>
+
+        <input type="checkbox" id="sector2" name="Textiles" value="Textiles">
+        <label for="sector2">Textiles</label>
+
+        <input type="checkbox" id="sector3" name="Finance" value="Finance">
+        <label for="sector3">Finance</label>
+
+        <input type="checkbox" id="sector4" name="Software Development" value="Software Development">
+        <label for="sector4">Software Development</label>
+
+        <hr class="hr-purple">
+
+        <input type="checkbox" id="time1" name="Full Time Work" value="Full Time Work">
+        <label for="time1">Full Time Work</label>
+
+        <input type="checkbox" id="time2" name="Part Time Work" value="Part Time Work">
+        <label for="time2">Part Time Work</label>
+
+        </br>
+        <button class="btn-main" id="run-filter" type="button">Filter</button>
+        <button class="btn-secondary" id="close-filter" type="button">Close</button>
+      </form> -->
+
+    </div>
+
+    <form class="popup-form opp-form" action="/explore" method="post">
+
+      <h2>Post a new opportunity to</br>the AbleWork Community</h2></br>
+      <hr class="hr-purple">
+      <h3>About the Role</h3></br>
+
+      <label for="opname">Opportunity Title</label></br>
+      <input class="text-input-style" type="text" name="opname">
+      </br></br>
+
+      <label for="opdescription">Brief Description</label></br>
+      <textarea class="text-input-style long-form" type="text" name="opdescription">Describe the opportunity here...</textarea>
+      </br></br>
+
+      <label for="opsector">Sector</label></br>
+      <div class="rounded">
+        <select name="opsector">
+          <option value="1">Hospitality & Events</option>
+          <option value="2">Hair & Beauty</option>
+          <option value="3">Business & Marketing</option>
+          <option value="4">Information Technology</option>
+          <option value="5">Health</option>
+          <option value="6">Arts & Design</option>
+          <option value="7">Environment & Agriculture</option>
+          <option value="8">Law & Society</option>
+          <option value="9">Other</option>
+        </select>
+      </div>
+      </br>
+
+      <label for="link">Link to more information</label></br>
+      <input class="text-input-style" type="text" name="link">
+      </br></br>
+
+      <label for="closingdate">Date Applications Close</label></br>
+      <input class="text-input-style" type="date" name="closingdate">
+      </br></br>
+
+      <hr class="hr-purple">
+
+      <h3>Work Hours</h3></br>
+
+      <input type="radio" name="hours" value="1">
+      <label for="hours">Full Time Work</label></br>
+
+      <input type="radio" name="hours" value="2">
+      <label for="hours">Part Time Work</label></br>
+
+      <input type="radio" name="hours" value="3">
+      <label for="hours">Casual Work</label>
+
+      <hr class="hr-purple">
+      <h3>Accessibility Support</h3></br>
+
+      <input type="checkbox" name="visibility" value="Visibility">
+      <label for="visibility">Visibility</label>
+
+      </br>
+
+      <input type="checkbox" name="hearing" value="Hearing">
+      <label for="hearing">Hearing</label>
+
+      </br>
+
+      <input type="checkbox" name="mobility" value="Mobility">
+      <label for="mobility">Mobility</label>
+      </br></br>
+
+      <button class="btn-main" id="submit-opp" type="submit">Submit</button>
+      <button class="btn-secondary" id="close-opp" type="button">Close</button>
+      </br></br>
+
+    </form>
+
+    <div class="row center tabs">
+      <div class="tab selected" id="opportunities">
+        <h3>Opportunities</h3>
+      </div>
+      <div class="tab not-selected" id="jobseekers">
+        <h3>Job Seekers</h3>
+      </div>
+    </div>
+
+    <div class="cards-container show" id="jobSearch">
+
+      {% for op in ops %}
+
+      <div class="row card" id="{{ op.opid }}">
+        <div class="card-icon-frame">
+          <i class="{{ op.icon }} card-icon"></i>
+        </div>
+        <div class="text-wrap">
+          <h3>{{ op.opname }}</h3>
+          <div>
+            <p>{{ op.hrs }}</p>
+            <h4>{{ op.businessname }}</h4>
+          </div>
+        </div>
+      </div>
+
+
+      {% endfor %}
+
+    </div>
+
+    <div class="cards-container hide" id="pplSearch">
+
+      {% for user in users %}
+
+
+      <div class="row card">
+        <div class="card-icon-frame">
+          <i class="fa fa-user card-icon"></i>
+        </div>
+        <div class="text-wrap">
+          <h3>{{ user.fname }} {{ user.lname }}</h3>
+          <div>
+            <p>{{ user.hrs }}</p>
+            <h4>{{ user.sector }}</h4>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+{% endblock %}
